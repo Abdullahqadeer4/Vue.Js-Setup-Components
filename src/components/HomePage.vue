@@ -4,6 +4,11 @@
      {{data}}
   </div>
   <h2>  {{msg}}  </h2>
+<!-- Click Events -->
+  <button v-on:click="Hi"> Press To see Magic </button>
+  <br>
+  <button v-on:click="By('Dont touch me')">Touch Me</button>
+
 </template>
 
 <script>
@@ -12,6 +17,22 @@ export default {
      props:{
           data:String,
           msg: String,
+     },
+
+     // Methods
+     methods:{
+          Hi()
+          {
+               console.log("Hello from console")
+          },
+          By(data)
+          {
+               alert(data)
+          },
+          mouse(input)
+          {
+               alert(input)
+          }
      }
 }
 </script>
